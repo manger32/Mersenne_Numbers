@@ -502,7 +502,7 @@ int main() {
 	  for (big_integer i = 2; i <= bi2; i+=1) f *= i;
 	    cout << f << endl;
     **/
-    big_integer radi_2 = 2;
+    big_integer base_2 = 2;
     cout << "List of Mersenn Numbers" << endl;
     int index_to_a = 1;
     for (big_integer i = 2; i < 1000; ++i)
