@@ -501,9 +501,10 @@ int main() {
 	  big_integer f = 1;
 	  for (big_integer i = 2; i <= bi2; i+=1) f *= i;
 	    cout << f << endl;
-    **/
+    **/	
     big_integer base_2 = 2;
-    cout << "List of Mersenn Numbers" << endl;
+	
+    cout << "List of Mersenne Numbers" << endl;
     int index_to_a = 1;
     for (big_integer i = 2; i < 1000; ++i)
     {
@@ -512,5 +513,18 @@ int main() {
             cout << index_to_a++ << ") " << i << " | " << base_2.pow(i)-1 << '\n';
         }
     }
+    /**
+    cout << "List of Mersenne Prime Numbers" << endl;
+    int index_to_a = 1;
+    for (big_integer i = 2; i < 1000; ++i)
+    {
+        bool check_i = fermat(i);
+        big_integer Mersenne = base_2.pow(i)-1;
+        if (check_i && fermat(Mersenne))
+        {
+            cout << index_to_a++ << ") " << i << " | " << Mersenne << '\n';
+        }
+    }
+    **/
     return 0;
 }
